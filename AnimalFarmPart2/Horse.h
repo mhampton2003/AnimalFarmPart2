@@ -1,9 +1,12 @@
+//Maya Hampton
+//This is my own work
+
 #ifndef HORSE_H
 #define HORSE_H
 
 #include "Animal.h"
 
-class Horse : Animal {
+class Horse : public Animal {
 private:
 	void gainWeight();
 public:
@@ -11,7 +14,8 @@ public:
 	Horse(std::string, double, double);
 	void eat();
 	void speak();
-
+	double getTopWeight() const;
+	std::string getSpecies() const;
 };
 
 #endif

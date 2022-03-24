@@ -1,3 +1,6 @@
+//Maya Hampton
+//This is my own work
+
 #include "Horse.h"
 
 //default Horse constructor
@@ -19,7 +22,7 @@ Horse::Horse(std::string name, double weight, double height)
 //prints that Horse is eating and gains weight
 void Horse::eat()
 {
-	std::cout << getName() << " the horse is eating now" << std::endl;
+	std::cout << getName() << " the Horse is eating now" << std::endl;
 	gainWeight();
 }
 
@@ -32,6 +35,18 @@ void Horse::gainWeight()
 
 }
 
-void speak() {
+//prints what the horse says
+void Horse::speak() {
 	std::cout << "Neigh!" << std::endl;
+}
+
+//returns the top weight of the Horse
+double Horse::getTopWeight() const {
+	return 2200;
+}
+
+//returns the species as a string
+std::string Horse::getSpecies() const
+{
+	return "Horse";
 }

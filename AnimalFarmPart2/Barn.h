@@ -1,3 +1,6 @@
+//Maya Hampton
+//This is my own work
+
 #ifndef BARN_H
 #define BARN_H
 
@@ -8,14 +11,14 @@
 
 class Barn {
 private:
-	std::vector<Chicken> coop;
-	std::vector<Horse> stalls;
-	std::vector<Cow> pen;
+	int numAnimals;
+	Animal* myAnimals[15];
 public:
 	Barn();
-	void feedChickens();
-	void feedHorses();
-	void feedCows();
+	void feedAnimals();
+	void outToPasture(Animal*&);
+	void show();
+	Barn();
 };
 
 #endif

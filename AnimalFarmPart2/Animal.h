@@ -1,14 +1,15 @@
+//Maya Hampton
+//This is my own work
+
 #ifndef ANIMAL_H
 #define ANIMAL_H
 #include <iostream>
 
 class Animal {
-protected:
+private:
 	std::string name;
 	double weight;
 	double height;
-
-private:
 	void gainWeight();
 
 public:
@@ -22,8 +23,9 @@ public:
 	void setHeight(double);
 
 	virtual void eat();
-	//virtual void speak() = 0; //" = 0;" means pure virtual function
-	//virtual double getTopWeight() = 0;
+	virtual void speak() = 0; //" = 0;" means pure virtual function
+	virtual double getTopWeight() const = 0;
+	virtual std::string getSpecies() const = 0;
 };
 
 #endif
